@@ -1,0 +1,1 @@
+CREATE TABLE membres(id int AUTO_INCREMENT,pseudo varchar(255),pass varchar(255),email varchar(255),date_inscription date, PRIMARY KEY(id));
