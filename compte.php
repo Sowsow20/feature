@@ -49,38 +49,52 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 <body>
 		
 	
-<div class="en_tete">
+<header class="en_tete">
 <label class="magasin">Magasin TOTO</label>
 
 
 
-<div class="middle_div">
-	<a href="profil.php">
-<label class="email"><?php echo $resultat['email']; ?></label>
-<!--<label class="pseudo"><?php echo $resultat['pseudo']; ?></label>-->
-</a></div>
+<input type="search" name="search_bar"  value="Pain, oeufs, ampoules ..." id="search_bar" aria-label="Search through site content">	
 
-<div class="right_div">
-<img class= "avatar" src="image/<?php echo $resultat['pseudo']; ?>.png">
-<img  class ="panier" src="image/compte/panier.jpg"/>
-<a href="deconnexion.php">
-<img type ="submit" class="logout" src="image/compte/logout.png"> 
+<!--<input id="chercher" type="button" name="search" value="rechercher">-->
+
+
+<div class="middle_div">
+	<a href="profil.php" class="email">
+<label ><?php echo $resultat['email']; ?></label>
+<!--<label class="pseudo"><?php echo $resultat['pseudo']; ?></label>-->
 </a>
 </div>
-</div>	
-<div class="search_zone">
-<label for="search_id" class ="search_bar_label" >Entrez votre recherche ici:	</label>
-<input type="search" name="search_bar" value="search...)" id="search_bar" aria-label="Search through site content">	
-<img class="search_icon" src="image/compte/search.png">
-</div>
-<div class="menu">
-	<div><a class="menu_links" href="ajout_produits.php">Ajouter un produit</a></div>
-	<div><a class="menu_links" href="google.com">Bon plan du moment</a></div>
-	<div><a class="menu_links" href="google.com">Mon magasin</a></div>
-	<div><a class="menu_links" href="google.com">Carte et assurances</a></div>
-	<div><a class="menu_links" href="google.com">Contact</a></div>
 
+<nav class="right_div">
+<img  class ="panier" src="image/compte/panier_paint.png"/>
+<a href="deconnexion.php">
+	<!--<img class= "avatar" src="image/<?php //echo $resultat['pseudo']; ?>.png">-->
+	<img  class="user_icon" src="image/compte/user_icon.jpg">
+</a>
+
+</nav>
+</header>	
+
+
+
+
+
+<div class="menu">
+	<a class="menu_links" href="ajout_produits.php">Boisson</a>
+	<a class="menu_links" href="ajout_produits.php">Alimentation Bébé</a>
+	<a class="menu_links" href="ajout_produits.php">Entretien</a>
+	<a class="menu_links" href="ajout_produits.php">Epicerie sucrée</a>
+	<a class="menu_links" href="ajout_produits.php">Epicerie salée</a>
+	<a class="menu_links" href="google.com">Santé</a>
+	<a class="menu_links" href="magasin.php">Beauté & Hygiène</a>
 </div>
+<div class="rayon">
+
+<label class="rayon_title">Notre rayon Boisson</label>
+</div>
+
+
 <div class="liste_produit">
 <?php
 $req = $bdd->query('SELECT * FROM produits');
@@ -134,7 +148,9 @@ while($data = $req->fetch())
 		<img class="contact_image" src="image/compte/footer/twiter.png">
 	</div>
 	<div class="footer_plus">
-	<div class="actualite">En ce moment</div>
+	<div class="actualite">Bon plan du moment</div>
+	<div><a class="menu_links" href="ajout_produits.php">Ajouter un produit</a></div>
+	<div><a class="menu_links" href="magasin.php">Mon magasin</a></div>
 	<div class="promotions">Promotions</div>
 	<div class="catalogues">Catalogues</div>
 	<div class="drive">Toto Drive</div>		

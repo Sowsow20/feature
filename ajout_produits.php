@@ -20,10 +20,7 @@
 <input type="hidden" name="max_file_size" value="50000">
 <label for="title" class="float">Image : </label> 
  <input TYPE="file" name="image"><br>
- <input type="submit" name="envoyer" value="envoyer le fichier">
-
-	
+ <input type="submit" name="envoyer" value="envoyer le fichier">	
 </form>
-
 </body>
 </html>
