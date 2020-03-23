@@ -26,7 +26,7 @@ if($resultat = $req->fetch())
 //header ("Content-type: image/png");
 $image= imagecreate(40,40);
 $blanc = imagecolorallocate($image, 255, 255, 255);
-$noir = imagecolorallocate($image, 0, 0, 0);
+$noir = imagecolorallocate($image, 0*00, 99, 0*00);
 $text=$resultat['pseudo'];
 $email=$resultat['email'];
 $pseudo= strtoupper(substr($text, 0,1));

@@ -1,102 +1,150 @@
-.panier
-{
-	width: 40px;
-	height: 40px;
-	padding-left: 10px;
-}
-.avatar
-{
-height: 40px;
-width: 40px;
-	padding-left: 10px;
-}
 .en_tete
-{
-width: 100%;
-background-color: #008080;
-}
+	{
+		height: 10%;
+		width: 99%;
+		background-color: #009900;
+		/*margin: auto;*/
+		text-align: center;
+	}
 .magasin
+	{
+		color: white;
+		font-weight: bold;
+		font-size: xx-large;
+		padding-left: 5%;
+	 display: inline-block;
+	 margin:0 auto;
+		
+	    /*
+	    line-height:10%;
+	    vertical-align: middle;
+	    text-align: center;*/
+	}
+	.user_icon
+	{
+		width:20px;
+		height: 20px;
+		margin-left: 10px;
+	}
+																/*
+															.search_zone
+																{
+																	/*margin-top: 40px;
+																	padding-top: 20px;
+																	margin-left: 0%;
+																	height: 100px;*/
+																	/*display: inline;
+																	line-height: 100%;
+
+																	vertical-align: middle;
+																}*/
+#search_bar
+	{
+		-webkit-appearance: none;
+		width: 30%;
+		margin-left: 2%;
+		height: 50%;
+		
+		line-height: 100%;
+		vertical-align: middle;
+		
+	}
+
+/*#chercher
+	{
+		height: 30%;
+		width: 6%;
+	    -webkit-appearance:none; 
+		background-color: white;
+	
+			 
+
+
+	}
+*/
+
+.middle_div
+{
+	margin-left: 5%;
+    	/*padding-top: 25px;
+    	margin-top: 10px;
+    	vertical-align: center;*/
+    	height:60%;
+  border: solid white 1px;
+    background-color: 009900;
+	display: inline;
+}
+
+.email
 {
 	color: white;
-	font-weight: bold;
-	font-size: 2.2em;
-	padding-left: 50px;
-	margin-top: 10px;
-	padding-top: 10px;
-	vertical-align: center;
+	font-size: 1em;
+	/*text-align: top;
+	margin-top: 10px;*/
+text-decoration: none;
+line-height: 60%;
+  vertical-align:middle;
+  font-weight: bold;
+	
 }
-.pseudo
+
+.right_div
+{
+	display: inline;
+	height: 70%;
+
+	/*margin-left: 4px;
+margin-top: 2px;*/
+}
+/*.pseudo
 {
 	color: black;
    text-align: center;
    margin:0 auto;
+/*padding-left: 10px;*/
+/*line-height: 50%;
+font-weight: bold;
+  vertical-align: middle;
+}*/
+.avatar
+{
+height: 40%;
+width: 4%;
 padding-left: 10px;
+}
 
-  vertical-align: center;
-}
-.email
+.panier
 {
-	color: black;
-	font-size: 1em;
-	text-align: top;
-margin-top: 10px;
+	width: 2.5%;
+	height: 40%;
+	padding-left: 10px;
+	margin-top: 1%;
 
-  vertical-align:center;
-  font-weight: bold;
-	
 }
-.middle_div
-{
-	margin-left: 780px;
-    	padding-top: 25px;
-    	margin-top: 10px;
-    	height:40px;
-  vertical-align: center;
-    background-color: white;
-	display: inline;
-}
-.logout
+
+/*.logout
 {
 	margin-top: 8px;
-	height: 40px;
-	width: 40px;
+	height: 30%;
+	width: 4%;
 	padding-left: 10px;
-}
-.right_div
-{
-	display: inline;
-	margin-left: 4px;
-margin-top: 2px;
-}
-.search_bar_label
-{
-	font-size: 2em;
-	padding-top: 500px;
-	padding-left: 100px;
-	display: inline;
-	
-}
-#search_bar
-{
-	height: 150px;
-	width: 400px;
-	padding-top: 100px;
-    padding-left: 50px;
-    margin-top: 10px;
-    line-height: 28px;
-    padding: 20px 10px;
-}
-.search_zone
-{
-	padding-top: 20px;
-}
-.search_icon
-{
-	width: 20px;
-	height: 20px;
-	padding-top: 5px;
+}*/
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .heart_cart
 {
 	width: 20px;
@@ -108,21 +156,53 @@ margin-top: 2px;
 .menu
 {
 	background-color: white;
-	color: green;
-	float:left;
-	width: 20%;
-	height: 100%;
-
+	
+/*	margin-top: auto;
+	margin-bottom: auto;*/
+border:solid #c2fdcc 1px;
+	width: 100%;
+	height: 7%;
+	text-align: center;
 
 }
 .menu_links
 {
-	color: #008080;
-	font-size: 1.7em;
-	font-family: cursive;
+	
+
+	line-height: 10%;
+	vertical-align: middle;
+display: inline-block;
+	
+	color: #009900;
+	font-size: 1em;
+	text-decoration:none;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 2%;
+margin-bottom: 2%;
 
 
 }
+.rayon
+{
+	width: 90%;
+	height: 100px;
+	/*float: center;*/
+	margin :auto;
+	background-color:#c2fdcc; 
+
+}
+
+.rayon_title
+{
+
+color:#009900;
+font-size: xx-large;
+margin-left: 40px;
+line-height: 100px;
+vertical-align: middle;
+}
+
 .nom_produit
 {
 	font-weight: bold;
@@ -158,10 +238,10 @@ align-content: center;
 	background-color: white;
 	align-content: center;
     display: inline-grid; 
-    
+  
     line-height: 1.4;
      margin: 1em ;
-     border :solid #008080;
+    
      width: 200px;
      height: 200px;
 
@@ -170,7 +250,7 @@ align-content: center;
 }
 html,body
 {
-background-color: #F0FFFF;
+background-color: white;/*#c3e7c3*/
 height: 100%;
 width: 100%;
 }
@@ -239,7 +319,7 @@ width: 100%;
 {
 	grid-row: 1;
 	grid-column: 1;
-	
+
 
 }
 .promotions
