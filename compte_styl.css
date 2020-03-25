@@ -22,8 +22,8 @@
 	}
 	.user_icon
 	{
-		width:20px;
-		height: 20px;
+		width:25px;
+		height: 25px;
 		margin-left: 10px;
 	}
 																/*
@@ -44,8 +44,10 @@
 		width: 30%;
 		margin-left: 2%;
 		height: 50%;
-		
+		color:#999999;
+		border-radius: 5px;
 		line-height: 100%;
+	border:none;
 		vertical-align: middle;
 		
 	}
@@ -71,13 +73,13 @@
     	vertical-align: center;*/
     	height:60%;
   border: solid white 1px;
-    background-color: 009900;
+    background-color: white;
 	display: inline;
 }
 
 .email
 {
-	color: white;
+	color: #009900;
 	font-size: 1em;
 	/*text-align: top;
 	margin-top: 10px;*/
@@ -92,6 +94,7 @@ line-height: 60%;
 {
 	display: inline;
 	height: 70%;
+	margin-left:20%;
 
 	/*margin-left: 4px;
 margin-top: 2px;*/
@@ -149,8 +152,10 @@ padding-left: 10px;
 {
 	width: 20px;
 	height: 20px;
-	grid-row: 1;
-	padding-top: 5px;
+	grid-row: 4;
+	grid-column: 2/3;
+	margin-right: 10px;
+margin:0 auto;
 
 }
 .menu
@@ -160,7 +165,7 @@ padding-left: 10px;
 /*	margin-top: auto;
 	margin-bottom: auto;*/
 border:solid #c2fdcc 1px;
-	width: 100%;
+	width: 99%;
 	height: 7%;
 	text-align: center;
 
@@ -190,46 +195,54 @@ margin-bottom: 2%;
 	/*float: center;*/
 	margin :auto;
 	background-color:#c2fdcc; 
+	
 
 }
 
 .rayon_title
-{
+	{
+		color:#009900;
+		font-size: xx-large;
+		margin-left: 40px;
+		line-height: 100px;
+		vertical-align: middle;
 
-color:#009900;
-font-size: xx-large;
-margin-left: 40px;
-line-height: 100px;
-vertical-align: middle;
-}
+	}
 
 .nom_produit
 {
-	font-weight: bold;
+	
 	white-space: nowrap;
 	align-items:flex-end ;
 	  grid-column: 1;
 	  grid-row: 3;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: small;
+  font-family: serif ;
+  overflow: hidden;
+  color: #009900;
   grid-column-start:1; 
   text-align: justify;
   padding-left: 5px;
 }
 .prix_produit 
 {
-	color: red;
+	color: #009900;
 	white-space: nowrap;
 	  grid-row: 3 ;
-	  text-align: justify;
+	  grid-column: 2/3;
 
+	  margin-right: 10px;
+	margin: 0 auto;
 }
 .produit
 {
-width: 150px;
-height: 150px;
+width: 100px;
+height: 100px;
 grid-row: 2;
-vertical-align: center;
-align-content: center;
+margin: 0 auto;
+grid-column: 1/3;
+
 
 
 }
@@ -238,13 +251,15 @@ align-content: center;
 	background-color: white;
 	align-content: center;
     display: inline-grid; 
-  
-    line-height: 1.4;
-     margin: 1em ;
     
-     width: 200px;
-     height: 200px;
-
+    box-shadow:10px 10px 5px #999999;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+text-align: center;    
+     width: 20%;
+     height: 25%;
+border-radius:5px;
 
 
 }
@@ -258,60 +273,85 @@ width: 100%;
 {
 	width: 20px;
 	height: 20px;
-	grid-row: 3;
+	margin-left: 10px;
+	grid-row: 4;
+	grid-column: 1/2;
+
 }
 .description_produit 
 {
 	grid-row: 1;
-	grid-column: 1;
+overflow: hidden;
 	font-size: 0.8em;
 	padding-top: 5px;
-	padding-left: 5px;
+display: inline-block;
+white-space: nowrap;
+padding-left: 5px;
+	
+	text-align: center;
+	color: #999999;
 }
 
 .footer
 {
-	height: 60px;
-   
-
-	background-color: #008080;
+	height: 80px;
+	width: 99%;
+	background-color: #009900;
+	margin-bottom: 10px;
 }
 
 .label_contact
 {
-	font-size: 1.7em;
+	font-size: small;
 	font-weight: bold;
-	font-family: cursive;
+	font-family: serif;
 	
 	color: white;
-	padding-top:20;
-	margin-top: 20;
+		vertical-align:top ;
 	margin-left: 10px;
-	line-height: normal;
-	vertical-align:top ;
+	padding-top: 5px;
+	margin-top: 10px;
+
 }
 .contact_image
 {
-	width: 50px;
-	height: 50px;
-	vertical-align: center;
-	align-content: center;
-	display: inline-block;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	width: 40px;
+	height: 40px;
+	vertical-align: top;
+	line-height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+
+	
 }
 .divv
 {
-	width: 80%;
+	width: 90%;
 	height: 100%;
-	padding-left: 20%;
+	margin: 0 auto;
+	background-color:  #f8f8ff;
+	text-align: center;
+
+	
 }
 .footer_plus
 {
-	border:solid black;
-	display: inline-grid;
+	
+	display: inline-block;
+     width: 100%;
 	align-content: center;
-	background-color: white;
+	background-color: #f8f8ff;
+	
+}
+.footer_plus_1
+{
+	
+	display: inline-block;
+     width: 30%;
+	align-content: center;
+	background-color: #f8f8ff;
+	float: left;
 
 
 }
@@ -338,4 +378,73 @@ width: 100%;
 {
 	grid-row: 2;
 	grid-column: 2;
+}
+.copyrights
+{
+	color: #009900;
+	text-align: center;
+	font-size: x-small;
+}
+.nos_partenaires
+{
+	color: #009900;
+	text-align:center;
+	font-size:x-small;
+	font-weight:bolder;
+}
+.apropos
+{
+	
+	color: #009900;
+	font-weight: normal;
+	margin-left:20px;
+
+	
+}
+.footer_plus_2
+{
+
+display: inline-block;
+     width: 30%;
+	align-content: center;
+	background-color: #f8f8ff;
+	float: center;
+	
+
+}
+.footer_plus_3
+{
+	
+	display: inline-block;
+     width: 30%;
+	align-content: center;
+	background-color: #f8f8ff;
+	float: right;
+
+}
+.information
+{
+	color: #009900;
+	text-decoration:none;
+	font-size: x-small;
+	font-weight: lighter;
+	font-family: sans-serif,serif;
+	margin-left: 20px;
+
+}
+.mail_inscription
+{
+	display: inline-block;
+	color: #999999;
+margin-left: 20px;
+	width: 70%;
+}
+.ok
+{
+	color: white;
+	background-color: #009900;
+}
+.newsletter
+{
+
 }

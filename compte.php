@@ -58,19 +58,19 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 
 <!--<input id="chercher" type="button" name="search" value="rechercher">-->
 
-
+<!--
 <div class="middle_div">
 	<a href="profil.php" class="email">
-<label ><?php echo $resultat['email']; ?></label>
-<!--<label class="pseudo"><?php echo $resultat['pseudo']; ?></label>-->
+<label ><?php //echo $resultat['email']; ?></label>
+<!--<label class="pseudo"><?php //echo $resultat['pseudo']; ?></label>
 </a>
 </div>
-
+-->
 <nav class="right_div">
 <img  class ="panier" src="image/compte/panier_paint.png"/>
 <a href="deconnexion.php">
 	<!--<img class= "avatar" src="image/<?php //echo $resultat['pseudo']; ?>.png">-->
-	<img  class="user_icon" src="image/compte/user_icon.jpg">
+	<img  class="user_icon" src="image/compte/user_icon.png">
 </a>
 
 </nav>
@@ -87,7 +87,7 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 	<a class="menu_links" href="ajout_produits.php">Epicerie sucrée</a>
 	<a class="menu_links" href="ajout_produits.php">Epicerie salée</a>
 	<a class="menu_links" href="google.com">Santé</a>
-	<a class="menu_links" href="magasin.php">Beauté & Hygiène</a>
+	<!--<a class="menu_links" href="magasin.php">Beauté & Hygiène</a>-->
 </div>
 <div class="rayon">
 
@@ -95,7 +95,7 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 </div>
 
 
-<div class="liste_produit">
+<div >
 <?php
 $req = $bdd->query('SELECT * FROM produits');
 
@@ -111,14 +111,14 @@ while($data = $req->fetch())
 <div class="produit_item">
 
 	<label class="description_produit"><?php echo $data['description'];?></label>
-	<img class="heart_cart" src="image/compte/wish.jpg">
+	
 	<img class="produit" src=<?php echo $data['photo'];?>>
 	
 
 	<label class="nom_produit"><?php echo $data['nom_produit'];?></label>
 	<label class="prix_produit"><?php echo $data['prix_produit'];?>€</label>
 	<img class="shopping_cart" src="image/compte/orange_shopping_cart.png">
-
+<img class="heart_cart" src="image/compte/wish.jpg">
 
 </div>	
 
@@ -140,7 +140,7 @@ while($data = $req->fetch())
 
 
 	<div class="footer">
-		<label class="label_contact">Suivez-nous: </label>
+		<div class="label_contact">Nous suivre: </div>
 		<img class="contact_image" src="image/compte/footer/facebook.png">
 		<img class="contact_image" src="image/compte/footer/youtube.png">
 		<img class="contact_image" src="image/compte/footer/instagram.png">
@@ -148,16 +148,67 @@ while($data = $req->fetch())
 		<img class="contact_image" src="image/compte/footer/twiter.png">
 	</div>
 	<div class="footer_plus">
-	<div class="actualite">Bon plan du moment</div>
+	<div class="footer_plus_1">
+	<div> <label class="apropos">A propos de Toto</label> </div>
+	<div><a class="information" href="ajout_produits.php">Qui sommes-nous?</a></div>
+	<div><a class="information" href="magasin.php">Conditions générales de vente</a></div>
+	<div><a class="information" href="magasin.php">Mentions légales</a></div>
+	<div> <a class="information" href="magasin.php">Protection des données</a></div>
+	<div> <a class="information" href="magasin.php">Rejoignez-nous</a></div>	
+	<div> <a class="information" href="magasin.php">Contrôler mes cookies</a></div>	
+	</div>
+
+<div class="footer_plus_2">
+<div>
+	<label class="apropos">
+Recevez notre newsletter</label>
+</div>
+<div>
+	<p class="information">Pour suivre l’actualité du Bio,les promos, nouveautés... inscrivez-vous : </p>
+<div>
+	<input type="text" class="mail_inscription" name="email_inscription" value="votre adresse email" />
+	<input type="button"  class="ok" name="ok" value="ok" />
+</div>
+</div>
+
+</div>
+<div class="footer_plus_3">
+<div>
+<div><label class="apropos">Pour les particuliers</label></div>
+<div><a class="information" href="magasin.php">Informations livraison</a></div>
+<div><a class="information" href="magasin.php">Livraisons internationales</a></div>
+<div><a class="information" href="magasin.php">Suivre votre commande</a></div>
+</div>
+<br>
+<div >
+<div><label class="apropos">Pour les professionnels</label></div>
+<div><a class="information" href="">Presse et media</a></div>
+<div><a class="information" href="">Fournisseurs</a></div>
+</div>
+
+</div>
+</div>
+
+
+<div class="copyrights">
+	© 2020-2021 Toto - Tous droits réservés
+</div>
+<div class="copyrights">Avis Toto - Toto Magazine </div>
+<div class="nos_partenaires">
+Nos partenaires :</div>
+	
+
+
+<!--
+	<div class="footer_plus">
+	<div class="actualite">A propos de Toto</div>
 	<div><a class="menu_links" href="ajout_produits.php">Ajouter un produit</a></div>
 	<div><a class="menu_links" href="magasin.php">Mon magasin</a></div>
 	<div class="promotions">Promotions</div>
 	<div class="catalogues">Catalogues</div>
 	<div class="drive">Toto Drive</div>		
 	</div>
-
-
-	
+-->
 </body>
 </html>
 
