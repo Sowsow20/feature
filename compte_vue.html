@@ -1,43 +1,3 @@
-<?php 
-if(!isset($_SESSION))
-{
-session_start();
-}
-try
-{
-	$bdd= new PDO ('mysql:host=localhost;dbname=Espace_Membres;charset=utf8','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
-catch (Exception $e)
-{
-die('ERROR '.$e->getMessage());
-}
-
-$res=$bdd->query('SELECT * FROM membres WHERE id = '.$_SESSION['id']);
-
-$resultat= $res->fetch();
-
-?>
-
-<?php
-
-//echo 'Bonjour '.$_SESSION['pseudo'].', et bienvenu sur votre compte personnel'; 
-/*
-<?php
-if(!empty($_POST['envoyer'])) {
-    echo "Bonjour !";
-    // ou echo afficher();
-}
-?>
- 
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-    <input type="submit" id="envoyer" name="envoyer" value="envoyer">
-<form>
-
-
-si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend quil a a apeeler une fonction javascript onclick et et non pas une fonction php 
-*/
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -48,45 +8,19 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 
 </head>
 <body>
-		
-	
 <header class="en_tete">
 <h1 class="magasin">Magasin TOTO</h1>
-
-
-
 <input type="search" name="search_bar"  value="Pain, oeufs, ampoules ..." id="search_bar" aria-label="Search through site content">	
-
-
-
-
-<!--
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" >
-			<input id="chercher" type="button" name="search" value="rechercher">-->
-
-<!--
-<div class="middle_div">
-	<a href="profil.php" class="email">
-<label ><?php //echo $resultat['email']; ?></label>
-<!--<label class="pseudo"><?php //echo $resultat['pseudo']; ?></label>
-</a>
-</div>
--->
 <nav class="right_div">
 	<img class="panier" src="image/compte/wish-list-icon.png"/>
 <a href = "panier.php"> <img  class ="panier" src="image/compte/panier6.png"/></a>
 <a href="deconnexion.php">
-	<!--<img class= "avatar" src="image/<?php //echo $resultat['pseudo']; ?>.png">-->
+	
 	<img  class="user_icon" src="image/compte/user_icon.png">
 </a>
 
 </nav>
 </header>	
-
-
-
-
-
 <div class="menu" id = "menu">
 	<a class="menu_links" href="ajout_produits.php">Boisson</a>
 <a class="menu_links" href="ajout_produits.php" onmouseover="hover('Appel are delicious')"> Alimentation Bébé </a>
@@ -94,19 +28,25 @@ si je fais <button onclick="coco()">Déconnexion</button> le navigateur comprend
 	<a class="menu_links" href="ajout_produits.php">Epicerie sucrée</a>
 	<a class="menu_links" href="ajout_produits.php">Epicerie salée</a>
 	<a class="menu_links" href="google.com">Santé</a>
-	<!--<a class="menu_links" href="magasin.php">Beauté & Hygiène</a>-->
+	
 </div>
 <div class="rayon" id="rayon">
-
 <label class="rayon_title">Notre rayon Boisson</label>
 </div>
-
-
 <div >
-<?php
-$req = $bdd->query('SELECT * FROM produits');
 
-if($data = $req->fetch())
+
+
+
+
+
+
+
+
+<?php
+
+
+if($data )
 {
 ?>
 <div class="divv">
@@ -117,13 +57,13 @@ while($data = $req->fetch())
 
 <div class="produit_item">
 
-	<label class="description_produit"><?php echo $data['description'];?></label>
+	<label class="description_produit"><?= $data['description'];?></label>
 	
-	<img class="produit" src=<?php echo $data['photo'];?>>
+	<img class="produit" src=<?= $data['photo'];?>>
 	
 
-	<label class="nom_produit"><?php echo $data['nom_produit'];?></label>
-	<label class="prix_produit"><?php echo $data['prix_produit'];?>€</label>
+	<label class="nom_produit"><?= $data['nom_produit'];?></label>
+	<label class="prix_produit"><?= $data['prix_produit'];?>€</label>
 	<a href=""	 onclick="ajouterAuPanier()"><img class="shopping_cart" src="image/compte/orange_shopping_cart.png" ></a>
 <img class="heart_cart" src="image/compte/wish.jpg">
 
@@ -144,9 +84,7 @@ while($data = $req->fetch())
 ?>	
 
 </div>
-
-
-	<div class="footer">
+<div class="footer">
 		<div class="label_contact">Nous suivre: </div>
 		<img class="contact_image" src="image/compte/footer/facebook.png">
 		<img class="contact_image" src="image/compte/footer/youtube.png">
@@ -206,16 +144,6 @@ Nos partenaires :</div>
 	
 
 
-<!--
-	<div class="footer_plus">
-	<div class="actualite">A propos de Toto</div>
-	<div><a class="menu_links" href="ajout_produits.php">Ajouter un produit</a></div>
-	<div><a class="menu_links" href="magasin.php">Mon magasin</a></div>
-	<div class="promotions">Promotions</div>
-	<div class="catalogues">Catalogues</div>
-	<div class="drive">Toto Drive</div>		
-	</div>
--->
 <script type="text/javascript" src="compte.js"></script>
 </body>
 </html>

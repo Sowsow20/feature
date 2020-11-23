@@ -70,6 +70,19 @@ h1
 		vertical-align: middle;
 		
 	}
+	#modal_class
+	{
+		background-color: red;
+		color:pink;
+		right:0;
+		left: auto;
+		width:30%;
+	}
+	#user_section
+	{
+		display:none;	
+	}
+	
 
 	#search_bar_javascript
 	{

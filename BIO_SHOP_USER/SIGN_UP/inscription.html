@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inscription.php</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="inscription_style.css">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
+</head>
+<body>
+	<div class="inscription">
+<form method ="POST" action="inscription_controlleur.php">
+	<h1>Inscription</h1>
+	<div class="user_information">Nom utilisateur
+	<input type="text" name="pseudo" placeholder="Entrer le nom d'utilisateur"  / ></div>
+	<div class="user_information">Mot de passe</div>
+	<div><input type="password" name="pass" placeholder="Entrer le mot de passe" ></div>
+	<div class="user_information">Confirmation de mot de passe</div>
+	<div><input type="password" name="passconfirm"  placeholder="Confirmer le mot de passe"></div>
+	<div class="user_information">Adresse email</div>
+	<div><input type="text" name="email" placeholder="Entrer votre adresse mail"/></div>
+	 <!-- Notre boite de vérification -->
+          <div class="g-recaptcha" 
+          data-sitekey="6Lfkxs0UAAAAADl1kF1-R6JlbnQHFgaiP-H5SLtL">
+          </div> <br>
+	
+	<div class="button_parent_div">
+		<button type="submit">Valider </button><br> <br>
+	</div>
+	 <div class="connection">Pour se connecter veuillez cliquer sur ce lien :  <a href="connection.php">Connection</a></div>
+</form>
+
+</div>
+
+<div class="connection">
+	
+
+</div>
+
+</body>
+</html>

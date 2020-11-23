@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>compte</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Bio_shop_welcome_style.css"/>
+
+</head>
+<body>
+<header class="en_tete">
+<h1 class="magasin">Bio Shop</h1>
+<input type="search" name="search_bar"  value="Pain, oeufs, ampoules ..." id="search_bar" aria-label="Search through site content">	
+<nav class="right_div">
+	<img class="panier" src="../image/compte/wish-list-icon.png"/>
+<a href = "panier.php"> <img  class ="panier" src="../image/compte/panier6.png"/></a>
+
+<a href="" id='user_div'   >
+	
+	<img  class="user_icon" src="../image/compte/user_icon.png">
+</a>
+
+</nav>
+</header>	
+<div id="user_section" >
+	<p>Mon email</p>
+	<input type="text" name="email"/>
+	<p>Mot de passe</p>
+	<input type="password" name="passeword"/>
+	<div><button>Se connecter</button></div>
+	<div><button>Créer votre compte</button></div>
+	<div><a href="">Rénitialiser mon mot de passe</a></div>
+</div>
+<div class="menu" id = "menu">
+	<a class="menu_links" href="ajout_produits.php">Boisson</a>
+<a class="menu_links" href="ajout_produits.php" onmouseover="hover('Appel are delicious')"> Alimentation Bébé </a>
+	<a class="menu_links" href="ajout_produits.php">Entretien</a>
+	<a class="menu_links" href="ajout_produits.php">Epicerie sucrée</a>
+	<a class="menu_links" href="ajout_produits.php">Epicerie salée</a>
+	<a class="menu_links" href="google.com">Santé</a>
+	
+</div>
+<div class="rayon" id="rayon">
+<label class="rayon_title">Notre rayon Boisson</label>
+</div>
+<div >
+
+
+
+
+
+
+
+
+
+<?php
+
+
+if($data )
+{
+?>
+<div class="divv">
+	<?php
+while($data = $req->fetch())
+{
+	?>
+
+<div class="produit_item">
+
+	<label class="description_produit"><?= $data['description'];?></label>
+	
+	<img class="produit" src=<?= '../'.$data['photo'];?>>
+	
+
+	<label class="nom_produit"><?= $data['nom_produit'];?></label>
+	<label class="prix_produit"><?= $data['prix_produit'];?>€</label>
+	<a href=""	 onclick="ajouterAuPanier()"><img class="shopping_cart" src="../image/compte/orange_shopping_cart.png" ></a>
+<img class="heart_cart" src="../image/compte/wish.jpg">
+
+</div>	
+
+ <?php 
+
+}
+?>
+	
+</div>
+
+<?php
+}
+
+
+
+?>	
+
+</div>
+<div class="footer">
+		<div class="label_contact">Nous suivre: </div>
+		<img class="contact_image" src="../image/compte/footer/facebook.png">
+		<img class="contact_image" src="../image/compte/footer/youtube.png">
+		<img class="contact_image" src="../image/compte/footer/instagram.png">
+		<img class="contact_image" src="../image/compte/footer/pinterest.png">
+		<img class="contact_image" src="../image/compte/footer/twiter.png">
+	</div>
+	<div class="footer_plus">
+	<div class="footer_plus_1">
+	<div> <label class="apropos">A propos de Toto</label> </div>
+	<div><a class="information" href="ajout_produits.php">Qui sommes-nous?</a></div>
+	<div><a class="information" href="magasin.php">Conditions générales de vente</a></div>
+	<div><a class="information" href="magasin.php">Mentions légales</a></div>
+	<div> <a class="information" href="magasin.php">Protection des données</a></div>
+	<div> <a class="information" href="magasin.php">Rejoignez-nous</a></div>	
+	<div> <a class="information" href="magasin.php">Contrôler mes cookies</a></div>	
+	</div>
+
+<div class="footer_plus_2">
+<div>
+	<label class="apropos">
+Recevez notre newsletter</label>
+</div>
+<div>
+	<p class="information">Pour suivre l’actualité du Bio,les promos, nouveautés... inscrivez-vous : </p>
+<div>
+	<input type="text" class="mail_inscription" name="email_inscription" value="votre adresse email" />
+	<input type="button"  class="ok" name="ok" value="ok" />
+</div>
+</div>
+
+</div>
+<div class="footer_plus_3">
+<div>
+<div><label class="apropos">Pour les particuliers</label></div>
+<div><a class="information" href="magasin.php">Informations livraison</a></div>
+<div><a class="information" href="magasin.php">Livraisons internationales</a></div>
+<div><a class="information" href="magasin.php">Suivre votre commande</a></div>
+</div>
+<br>
+<div >
+<div><label class="apropos">Pour les professionnels</label></div>
+<div><a class="information" href="">Presse et media</a></div>
+<div><a class="information" href="">Fournisseurs</a></div>
+</div>
+
+</div>
+</div>
+
+
+<div class="copyrights">
+	© 2020-2021 Toto - Tous droits réservés
+</div>
+<div class="copyrights">Avis Toto - Toto Magazine </div>
+<div class="nos_partenaires">
+Nos partenaires :</div>
+	
+
+
+<script type="text/javascript" src="Bio_shop_events.js"></script>
+</body>
+</html>
+
